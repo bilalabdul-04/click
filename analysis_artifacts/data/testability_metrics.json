@@ -1,0 +1,138 @@
+{
+  "test_files_count": 21,
+  "total_test_loc": 14495,
+  "total_test_sloc": 11323,
+  "total_test_functions": 553,
+  "total_assertions": 1406,
+  "assertions_per_test": 2.54,
+  "coverage": {
+    "percent_covered": 84.96,
+    "num_statements": 4906,
+    "missing_lines": 640,
+    "num_branches": 1696,
+    "num_partial_branches": 167,
+    "covered_branches": 1343,
+    "branch_coverage_percent": 79.19,
+    "files": {
+      "__init__.py": {
+        "percent_covered": 100.0,
+        "num_statements": 92,
+        "missing_lines": 0,
+        "num_branches": 12,
+        "covered_branches": 12
+      },
+      "_compat.py": {
+        "percent_covered": 70.71,
+        "num_statements": 293,
+        "missing_lines": 77,
+        "num_branches": 86,
+        "covered_branches": 52
+      },
+      "_termui_impl.py": {
+        "percent_covered": 64.44,
+        "num_statements": 511,
+        "missing_lines": 172,
+        "num_branches": 192,
+        "covered_branches": 114
+      },
+      "_textwrap.py": {
+        "percent_covered": 73.2,
+        "num_statements": 103,
+        "missing_lines": 22,
+        "num_branches": 50,
+        "covered_branches": 31
+      },
+      "_utils.py": {
+        "percent_covered": 100.0,
+        "num_statements": 22,
+        "missing_lines": 0,
+        "num_branches": 0,
+        "covered_branches": 0
+      },
+      "_winconsole.py": {
+        "percent_covered": 47.37,
+        "num_statements": 162,
+        "missing_lines": 74,
+        "num_branches": 28,
+        "covered_branches": 2
+      },
+      "core.py": {
+        "percent_covered": 93.81,
+        "num_statements": 1404,
+        "missing_lines": 67,
+        "num_branches": 598,
+        "covered_branches": 541
+      },
+      "decorators.py": {
+        "percent_covered": 80.52,
+        "num_statements": 199,
+        "missing_lines": 31,
+        "num_branches": 68,
+        "covered_branches": 47
+      },
+      "exceptions.py": {
+        "percent_covered": 87.91,
+        "num_statements": 167,
+        "missing_lines": 10,
+        "num_branches": 48,
+        "covered_branches": 32
+      },
+      "formatting.py": {
+        "percent_covered": 94.47,
+        "num_statements": 147,
+        "missing_lines": 5,
+        "num_branches": 52,
+        "covered_branches": 46
+      },
+      "globals.py": {
+        "percent_covered": 92.86,
+        "num_statements": 22,
+        "missing_lines": 1,
+        "num_branches": 6,
+        "covered_branches": 5
+      },
+      "parser.py": {
+        "percent_covered": 96.87,
+        "num_statements": 243,
+        "missing_lines": 5,
+        "num_branches": 108,
+        "covered_branches": 102
+      },
+      "shell_completion.py": {
+        "percent_covered": 89.87,
+        "num_statements": 244,
+        "missing_lines": 19,
+        "num_branches": 62,
+        "covered_branches": 50
+      },
+      "termui.py": {
+        "percent_covered": 81.99,
+        "num_statements": 222,
+        "missing_lines": 36,
+        "num_branches": 100,
+        "covered_branches": 78
+      },
+      "testing.py": {
+        "percent_covered": 86.71,
+        "num_statements": 348,
+        "missing_lines": 43,
+        "num_branches": 66,
+        "covered_branches": 54
+      },
+      "types.py": {
+        "percent_covered": 91.19,
+        "num_statements": 492,
+        "missing_lines": 36,
+        "num_branches": 132,
+        "covered_branches": 113
+      },
+      "utils.py": {
+        "percent_covered": 79.57,
+        "num_statements": 235,
+        "missing_lines": 42,
+        "num_branches": 88,
+        "covered_branches": 64
+      }
+    }
+  }
+}

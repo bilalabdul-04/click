@@ -1,0 +1,105 @@
+{
+  "total_commits": 3379,
+  "first_commit_date": "2026-10-04",
+  "latest_commit_date": "2026-10-04",
+  "total_unique_authors": 470,
+  "authors_with_ge_50_commits": 8,
+  "top_authors": [
+    {
+      "name": "David Lord",
+      "commits": 876
+    },
+    {
+      "name": "Armin Ronacher",
+      "commits": 593
+    },
+    {
+      "name": "Rowlando13",
+      "commits": 273
+    },
+    {
+      "name": "Kevin Deldycke",
+      "commits": 194
+    },
+    {
+      "name": "Markus Unterwaditzer",
+      "commits": 151
+    },
+    {
+      "name": "dependabot-preview[bot]",
+      "commits": 106
+    },
+    {
+      "name": "Edward G",
+      "commits": 75
+    },
+    {
+      "name": "dependabot[bot]",
+      "commits": 60
+    },
+    {
+      "name": "denuoweb",
+      "commits": 45
+    },
+    {
+      "name": "Nicholas Wiles",
+      "commits": 34
+    },
+    {
+      "name": "Stephen Rosen",
+      "commits": 33
+    },
+    {
+      "name": "Dan Sully",
+      "commits": 32
+    },
+    {
+      "name": "unknown",
+      "commits": 27
+    },
+    {
+      "name": "pre-commit-ci[bot]",
+      "commits": 26
+    },
+    {
+      "name": "Julen Ruiz Aizpuru",
+      "commits": 21
+    }
+  ],
+  "commits_per_year": {
+    "2014": 568,
+    "2015": 240,
+    "2016": 98,
+    "2017": 95,
+    "2018": 254,
+    "2019": 128,
+    "2020": 325,
+    "2021": 374,
+    "2022": 142,
+    "2023": 211,
+    "2024": 144,
+    "2025": 402,
+    "2026": 398
+  },
+  "file_commit_churn": {
+    "src/click/core.py": 237,
+    "src/click/types.py": 84,
+    "src/click/termui.py": 77,
+    "src/click/_termui_impl.py": 70,
+    "src/click/utils.py": 56,
+    "src/click/decorators.py": 56,
+    "src/click/shell_completion.py": 53,
+    "src/click/__init__.py": 53,
+    "src/click/testing.py": 49,
+    "src/click/_compat.py": 42,
+    "src/click/exceptions.py": 36,
+    "src/click/parser.py": 32,
+    "src/click/_winconsole.py": 22,
+    "src/click/formatting.py": 22,
+    "src/click/globals.py": 12,
+    "src/click/_bashcomplete.py": 12,
+    "src/click/_unicodefun.py": 11,
+    "src/click/_textwrap.py": 7,
+    "src/click/_utils.py": 4
+  }
+}

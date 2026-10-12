@@ -1,0 +1,929 @@
+{
+  "__init__": {
+    "file": "__init__.py",
+    "rel_path": "src/click/__init__.py",
+    "loc": 144,
+    "sloc": 127,
+    "comments": 0,
+    "blank": 17,
+    "num_functions": 1,
+    "avg_ccn": 7.0,
+    "max_ccn": 7,
+    "top_complex_funcs": [
+      {
+        "name": "__getattr__",
+        "line": 76,
+        "ccn": 7
+      }
+    ],
+    "git_churn": 53,
+    "hotspot_score": 371.0,
+    "coupling": {
+      "afferent_ca": 0,
+      "efferent_ce": 9,
+      "instability_i": 1.0,
+      "depends_on": [
+        "core",
+        "decorators",
+        "exceptions",
+        "formatting",
+        "globals",
+        "parser",
+        "termui",
+        "types",
+        "utils"
+      ],
+      "depended_by": []
+    }
+  },
+  "_compat": {
+    "file": "_compat.py",
+    "rel_path": "src/click/_compat.py",
+    "loc": 590,
+    "sloc": 429,
+    "comments": 43,
+    "blank": 118,
+    "num_functions": 47,
+    "avg_ccn": 2.55,
+    "max_ccn": 20,
+    "top_complex_funcs": [
+      {
+        "name": "open_stream",
+        "line": 374,
+        "ccn": 20
+      },
+      {
+        "name": "_force_correct_text_stream",
+        "line": 241,
+        "ccn": 7
+      },
+      {
+        "name": "writable",
+        "line": 128,
+        "ccn": 5
+      },
+      {
+        "name": "should_strip_ansi",
+        "line": 502,
+        "ccn": 5
+      },
+      {
+        "name": "func",
+        "line": 553,
+        "ccn": 5
+      }
+    ],
+    "git_churn": 42,
+    "hotspot_score": 107.1,
+    "coupling": {
+      "afferent_ca": 9,
+      "efferent_ce": 1,
+      "instability_i": 0.1,
+      "depends_on": [
+        "_winconsole"
+      ],
+      "depended_by": [
+        "_termui_impl",
+        "_textwrap",
+        "_winconsole",
+        "exceptions",
+        "formatting",
+        "termui",
+        "testing",
+        "types",
+        "utils"
+      ]
+    }
+  },
+  "_termui_impl": {
+    "file": "_termui_impl.py",
+    "rel_path": "src/click/_termui_impl.py",
+    "loc": 972,
+    "sloc": 680,
+    "comments": 127,
+    "blank": 165,
+    "num_functions": 45,
+    "avg_ccn": 4.02,
+    "max_ccn": 19,
+    "top_complex_funcs": [
+      {
+        "name": "open_url",
+        "line": 799,
+        "ccn": 19
+      },
+      {
+        "name": "_pipepager",
+        "line": 549,
+        "ccn": 12
+      },
+      {
+        "name": "render_progress",
+        "line": 250,
+        "ccn": 11
+      },
+      {
+        "name": "edit",
+        "line": 751,
+        "ccn": 11
+      },
+      {
+        "name": "format_progress_line",
+        "line": 223,
+        "ccn": 10
+      }
+    ],
+    "git_churn": 70,
+    "hotspot_score": 281.4,
+    "coupling": {
+      "afferent_ca": 1,
+      "efferent_ce": 3,
+      "instability_i": 0.75,
+      "depends_on": [
+        "_compat",
+        "exceptions",
+        "utils"
+      ],
+      "depended_by": [
+        "termui"
+      ]
+    }
+  },
+  "_textwrap": {
+    "file": "_textwrap.py",
+    "rel_path": "src/click/_textwrap.py",
+    "loc": 188,
+    "sloc": 154,
+    "comments": 0,
+    "blank": 34,
+    "num_functions": 5,
+    "avg_ccn": 8.4,
+    "max_ccn": 30,
+    "top_complex_funcs": [
+      {
+        "name": "_wrap_chunks",
+        "line": 66,
+        "ccn": 30
+      },
+      {
+        "name": "_truncate_visible",
+        "line": 11,
+        "ccn": 5
+      },
+      {
+        "name": "_handle_long_word",
+        "line": 48,
+        "ccn": 3
+      },
+      {
+        "name": "indent_only",
+        "line": 177,
+        "ccn": 3
+      },
+      {
+        "name": "extra_indent",
+        "line": 165,
+        "ccn": 1
+      }
+    ],
+    "git_churn": 7,
+    "hotspot_score": 58.8,
+    "coupling": {
+      "afferent_ca": 1,
+      "efferent_ce": 1,
+      "instability_i": 0.5,
+      "depends_on": [
+        "_compat"
+      ],
+      "depended_by": [
+        "formatting"
+      ]
+    }
+  },
+  "_utils": {
+    "file": "_utils.py",
+    "rel_path": "src/click/_utils.py",
+    "loc": 45,
+    "sloc": 29,
+    "comments": 0,
+    "blank": 16,
+    "num_functions": 4,
+    "avg_ccn": 1.0,
+    "max_ccn": 1,
+    "top_complex_funcs": [
+      {
+        "name": "__repr__",
+        "line": 18,
+        "ccn": 1
+      },
+      {
+        "name": "__copy__",
+        "line": 21,
+        "ccn": 1
+      },
+      {
+        "name": "__deepcopy__",
+        "line": 24,
+        "ccn": 1
+      },
+      {
+        "name": "__reduce_ex__",
+        "line": 27,
+        "ccn": 1
+      }
+    ],
+    "git_churn": 4,
+    "hotspot_score": 4.0,
+    "coupling": {
+      "afferent_ca": 2,
+      "efferent_ce": 0,
+      "instability_i": 0.0,
+      "depends_on": [],
+      "depended_by": [
+        "core",
+        "parser"
+      ]
+    }
+  },
+  "_winconsole": {
+    "file": "_winconsole.py",
+    "rel_path": "src/click/_winconsole.py",
+    "loc": 292,
+    "sloc": 223,
+    "comments": 13,
+    "blank": 56,
+    "num_functions": 20,
+    "avg_ccn": 2.05,
+    "max_ccn": 7,
+    "top_complex_funcs": [
+      {
+        "name": "_get_windows_console_stream",
+        "line": 272,
+        "ccn": 7
+      },
+      {
+        "name": "readinto",
+        "line": 127,
+        "ccn": 6
+      },
+      {
+        "name": "_get_error_message",
+        "line": 163,
+        "ccn": 3
+      },
+      {
+        "name": "write",
+        "line": 170,
+        "ccn": 3
+      },
+      {
+        "name": "write",
+        "line": 199,
+        "ccn": 3
+      }
+    ],
+    "git_churn": 22,
+    "hotspot_score": 45.1,
+    "coupling": {
+      "afferent_ca": 1,
+      "efferent_ce": 1,
+      "instability_i": 0.5,
+      "depends_on": [
+        "_compat"
+      ],
+      "depended_by": [
+        "_compat"
+      ]
+    }
+  },
+  "core": {
+    "file": "core.py",
+    "rel_path": "src/click/core.py",
+    "loc": 4038,
+    "sloc": 2967,
+    "comments": 350,
+    "blank": 721,
+    "num_functions": 161,
+    "avg_ccn": 3.98,
+    "max_ccn": 33,
+    "top_complex_funcs": [
+      {
+        "name": "get_help_extra",
+        "line": 3614,
+        "ccn": 33
+      },
+      {
+        "name": "__init__",
+        "line": 370,
+        "ccn": 28
+      },
+      {
+        "name": "main",
+        "line": 1515,
+        "ccn": 20
+      },
+      {
+        "name": "handle_parse_result",
+        "line": 2929,
+        "ccn": 18
+      },
+      {
+        "name": "_parse_decls",
+        "line": 3449,
+        "ccn": 18
+      }
+    ],
+    "git_churn": 237,
+    "hotspot_score": 943.26,
+    "coupling": {
+      "afferent_ca": 8,
+      "efferent_ce": 10,
+      "instability_i": 0.556,
+      "depends_on": [
+        "_utils",
+        "decorators",
+        "exceptions",
+        "formatting",
+        "globals",
+        "parser",
+        "shell_completion",
+        "termui",
+        "types",
+        "utils"
+      ],
+      "depended_by": [
+        "__init__",
+        "decorators",
+        "exceptions",
+        "globals",
+        "parser",
+        "shell_completion",
+        "testing",
+        "types"
+      ]
+    }
+  },
+  "decorators": {
+    "file": "decorators.py",
+    "rel_path": "src/click/decorators.py",
+    "loc": 627,
+    "sloc": 468,
+    "comments": 15,
+    "blank": 144,
+    "num_functions": 35,
+    "avg_ccn": 2.34,
+    "max_ccn": 10,
+    "top_complex_funcs": [
+      {
+        "name": "callback",
+        "line": 501,
+        "ccn": 10
+      },
+      {
+        "name": "version_option",
+        "line": 421,
+        "ccn": 10
+      },
+      {
+        "name": "decorator",
+        "line": 217,
+        "ccn": 9
+      },
+      {
+        "name": "command",
+        "line": 168,
+        "ccn": 4
+      },
+      {
+        "name": "new_func",
+        "line": 77,
+        "ccn": 3
+      }
+    ],
+    "git_churn": 56,
+    "hotspot_score": 131.04,
+    "coupling": {
+      "afferent_ca": 2,
+      "efferent_ce": 3,
+      "instability_i": 0.6,
+      "depends_on": [
+        "core",
+        "globals",
+        "utils"
+      ],
+      "depended_by": [
+        "__init__",
+        "core"
+      ]
+    }
+  },
+  "exceptions": {
+    "file": "exceptions.py",
+    "rel_path": "src/click/exceptions.py",
+    "loc": 378,
+    "sloc": 281,
+    "comments": 6,
+    "blank": 91,
+    "num_functions": 23,
+    "avg_ccn": 2.39,
+    "max_ccn": 13,
+    "top_complex_funcs": [
+      {
+        "name": "format_message",
+        "line": 184,
+        "ccn": 13
+      },
+      {
+        "name": "show",
+        "line": 87,
+        "ccn": 5
+      },
+      {
+        "name": "_join_param_hints",
+        "line": 19,
+        "ccn": 3
+      },
+      {
+        "name": "format_message",
+        "line": 146,
+        "ccn": 3
+      },
+      {
+        "name": "__str__",
+        "line": 224,
+        "ccn": 3
+      }
+    ],
+    "git_churn": 36,
+    "hotspot_score": 86.04,
+    "coupling": {
+      "afferent_ca": 7,
+      "efferent_ce": 4,
+      "instability_i": 0.364,
+      "depends_on": [
+        "_compat",
+        "core",
+        "globals",
+        "utils"
+      ],
+      "depended_by": [
+        "__init__",
+        "_termui_impl",
+        "core",
+        "parser",
+        "termui",
+        "types",
+        "utils"
+      ]
+    }
+  },
+  "formatting": {
+    "file": "formatting.py",
+    "rel_path": "src/click/formatting.py",
+    "loc": 320,
+    "sloc": 258,
+    "comments": 6,
+    "blank": 56,
+    "num_functions": 17,
+    "avg_ccn": 2.71,
+    "max_ccn": 8,
+    "top_complex_funcs": [
+      {
+        "name": "wrap_text",
+        "line": 31,
+        "ccn": 8
+      },
+      {
+        "name": "write_dl",
+        "line": 229,
+        "ccn": 7
+      },
+      {
+        "name": "_flush_par",
+        "line": 78,
+        "ccn": 5
+      },
+      {
+        "name": "__init__",
+        "line": 127,
+        "ccn": 4
+      },
+      {
+        "name": "write_usage",
+        "line": 158,
+        "ccn": 4
+      }
+    ],
+    "git_churn": 22,
+    "hotspot_score": 59.62,
+    "coupling": {
+      "afferent_ca": 3,
+      "efferent_ce": 3,
+      "instability_i": 0.5,
+      "depends_on": [
+        "_compat",
+        "_textwrap",
+        "parser"
+      ],
+      "depended_by": [
+        "__init__",
+        "core",
+        "testing"
+      ]
+    }
+  },
+  "globals": {
+    "file": "globals.py",
+    "rel_path": "src/click/globals.py",
+    "loc": 67,
+    "sloc": 45,
+    "comments": 0,
+    "blank": 22,
+    "num_functions": 6,
+    "avg_ccn": 1.67,
+    "max_ccn": 3,
+    "top_complex_funcs": [
+      {
+        "name": "get_current_context",
+        "line": 20,
+        "ccn": 3
+      },
+      {
+        "name": "resolve_color_default",
+        "line": 54,
+        "ccn": 3
+      },
+      {
+        "name": "get_current_context",
+        "line": 13,
+        "ccn": 1
+      },
+      {
+        "name": "get_current_context",
+        "line": 17,
+        "ccn": 1
+      },
+      {
+        "name": "push_context",
+        "line": 44,
+        "ccn": 1
+      }
+    ],
+    "git_churn": 12,
+    "hotspot_score": 20.04,
+    "coupling": {
+      "afferent_ca": 6,
+      "efferent_ce": 1,
+      "instability_i": 0.143,
+      "depends_on": [
+        "core"
+      ],
+      "depended_by": [
+        "__init__",
+        "core",
+        "decorators",
+        "exceptions",
+        "termui",
+        "utils"
+      ]
+    }
+  },
+  "parser": {
+    "file": "parser.py",
+    "rel_path": "src/click/parser.py",
+    "loc": 533,
+    "sloc": 382,
+    "comments": 65,
+    "blank": 86,
+    "num_functions": 21,
+    "avg_ccn": 4.1,
+    "max_ccn": 9,
+    "top_complex_funcs": [
+      {
+        "name": "_unpack_args",
+        "line": 51,
+        "ccn": 9
+      },
+      {
+        "name": "_match_short_opt",
+        "line": 390,
+        "ccn": 9
+      },
+      {
+        "name": "_get_value_from_state",
+        "line": 430,
+        "ccn": 8
+      },
+      {
+        "name": "__init__",
+        "line": 128,
+        "ccn": 6
+      },
+      {
+        "name": "process",
+        "line": 169,
+        "ccn": 6
+      }
+    ],
+    "git_churn": 32,
+    "hotspot_score": 131.2,
+    "coupling": {
+      "afferent_ca": 3,
+      "efferent_ce": 4,
+      "instability_i": 0.571,
+      "depends_on": [
+        "_utils",
+        "core",
+        "exceptions",
+        "shell_completion"
+      ],
+      "depended_by": [
+        "__init__",
+        "core",
+        "formatting"
+      ]
+    }
+  },
+  "shell_completion": {
+    "file": "shell_completion.py",
+    "rel_path": "src/click/shell_completion.py",
+    "loc": 801,
+    "sloc": 585,
+    "comments": 57,
+    "blank": 159,
+    "num_functions": 33,
+    "avg_ccn": 2.58,
+    "max_ccn": 10,
+    "top_complex_funcs": [
+      {
+        "name": "_resolve_context",
+        "line": 696,
+        "ccn": 10
+      },
+      {
+        "name": "_resolve_incomplete",
+        "line": 757,
+        "ccn": 10
+      },
+      {
+        "name": "_is_incomplete_option",
+        "line": 671,
+        "ccn": 8
+      },
+      {
+        "name": "_check_version",
+        "line": 396,
+        "ccn": 6
+      },
+      {
+        "name": "_is_incomplete_argument",
+        "line": 639,
+        "ccn": 6
+      }
+    ],
+    "git_churn": 53,
+    "hotspot_score": 136.74,
+    "coupling": {
+      "afferent_ca": 3,
+      "efferent_ce": 2,
+      "instability_i": 0.4,
+      "depends_on": [
+        "core",
+        "utils"
+      ],
+      "depended_by": [
+        "core",
+        "parser",
+        "types"
+      ]
+    }
+  },
+  "termui": {
+    "file": "termui.py",
+    "rel_path": "src/click/termui.py",
+    "loc": 1024,
+    "sloc": 823,
+    "comments": 19,
+    "blank": 182,
+    "num_functions": 28,
+    "avg_ccn": 4.14,
+    "max_ccn": 21,
+    "top_complex_funcs": [
+      {
+        "name": "style",
+        "line": 641,
+        "ccn": 21
+      },
+      {
+        "name": "prompt",
+        "line": 168,
+        "ccn": 16
+      },
+      {
+        "name": "confirm",
+        "line": 289,
+        "ccn": 11
+      },
+      {
+        "name": "_interpret_color",
+        "line": 616,
+        "ccn": 11
+      },
+      {
+        "name": "_build_prompt",
+        "line": 108,
+        "ccn": 7
+      }
+    ],
+    "git_churn": 77,
+    "hotspot_score": 318.78,
+    "coupling": {
+      "afferent_ca": 3,
+      "efferent_ce": 6,
+      "instability_i": 0.667,
+      "depends_on": [
+        "_compat",
+        "_termui_impl",
+        "exceptions",
+        "globals",
+        "types",
+        "utils"
+      ],
+      "depended_by": [
+        "__init__",
+        "core",
+        "testing"
+      ]
+    }
+  },
+  "testing": {
+    "file": "testing.py",
+    "rel_path": "src/click/testing.py",
+    "loc": 798,
+    "sloc": 646,
+    "comments": 10,
+    "blank": 142,
+    "num_functions": 39,
+    "avg_ccn": 2.31,
+    "max_ccn": 20,
+    "top_complex_funcs": [
+      {
+        "name": "invoke",
+        "line": 596,
+        "ccn": 20
+      },
+      {
+        "name": "isolation",
+        "line": 399,
+        "ccn": 9
+      },
+      {
+        "name": "make_input_stream",
+        "line": 211,
+        "ccn": 5
+      },
+      {
+        "name": "__init__",
+        "line": 360,
+        "ccn": 5
+      },
+      {
+        "name": "visible_input",
+        "line": 475,
+        "ccn": 3
+      }
+    ],
+    "git_churn": 49,
+    "hotspot_score": 113.19,
+    "coupling": {
+      "afferent_ca": 0,
+      "efferent_ce": 5,
+      "instability_i": 1.0,
+      "depends_on": [
+        "_compat",
+        "core",
+        "formatting",
+        "termui",
+        "utils"
+      ],
+      "depended_by": []
+    }
+  },
+  "types": {
+    "file": "types.py",
+    "rel_path": "src/click/types.py",
+    "loc": 1437,
+    "sloc": 1083,
+    "comments": 63,
+    "blank": 291,
+    "num_functions": 73,
+    "avg_ccn": 2.51,
+    "max_ccn": 18,
+    "top_complex_funcs": [
+      {
+        "name": "convert",
+        "line": 1161,
+        "ccn": 18
+      },
+      {
+        "name": "convert",
+        "line": 666,
+        "ccn": 12
+      },
+      {
+        "name": "convert_type",
+        "line": 1356,
+        "ccn": 12
+      },
+      {
+        "name": "_describe_range",
+        "line": 717,
+        "ccn": 7
+      },
+      {
+        "name": "convert",
+        "line": 984,
+        "ccn": 7
+      }
+    ],
+    "git_churn": 84,
+    "hotspot_score": 210.84,
+    "coupling": {
+      "afferent_ca": 3,
+      "efferent_ce": 5,
+      "instability_i": 0.625,
+      "depends_on": [
+        "_compat",
+        "core",
+        "exceptions",
+        "shell_completion",
+        "utils"
+      ],
+      "depended_by": [
+        "__init__",
+        "core",
+        "termui"
+      ]
+    }
+  },
+  "utils": {
+    "file": "utils.py",
+    "rel_path": "src/click/utils.py",
+    "loc": 676,
+    "sloc": 506,
+    "comments": 28,
+    "blank": 142,
+    "num_functions": 32,
+    "avg_ccn": 2.81,
+    "max_ccn": 13,
+    "top_complex_funcs": [
+      {
+        "name": "echo",
+        "line": 240,
+        "ccn": 13
+      },
+      {
+        "name": "_make_default_short_help",
+        "line": 62,
+        "ccn": 10
+      },
+      {
+        "name": "_detect_program_name",
+        "line": 550,
+        "ccn": 9
+      },
+      {
+        "name": "get_app_dir",
+        "line": 472,
+        "ccn": 6
+      },
+      {
+        "name": "_expand_args",
+        "line": 605,
+        "ccn": 6
+      }
+    ],
+    "git_churn": 56,
+    "hotspot_score": 157.36,
+    "coupling": {
+      "afferent_ca": 9,
+      "efferent_ce": 3,
+      "instability_i": 0.25,
+      "depends_on": [
+        "_compat",
+        "exceptions",
+        "globals"
+      ],
+      "depended_by": [
+        "__init__",
+        "_termui_impl",
+        "core",
+        "decorators",
+        "exceptions",
+        "shell_completion",
+        "termui",
+        "testing",
+        "types"
+      ]
+    }
+  }
+}

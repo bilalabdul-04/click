@@ -1,0 +1,17 @@
+{
+  "import_overhead": {
+    "avg_ms": 18.249,
+    "min_ms": 15.29,
+    "max_ms": 24.85,
+    "samples": 30
+  },
+  "parse_dispatch_latency": {
+    "simple_command_parse_us": 65.98,
+    "nested_group_parse_us": 25.73,
+    "iterations": 10000
+  },
+  "memory_footprint": {
+    "tree_100_cmds_allocation_kb": 716.1,
+    "peak_rss_allocation_kb": 721.17
+  }
+}
