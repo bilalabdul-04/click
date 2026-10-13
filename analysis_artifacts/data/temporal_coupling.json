@@ -1,0 +1,432 @@
+[
+  {
+    "file_a": "core.py",
+    "file_b": "types.py",
+    "shared_commits": 29,
+    "commits_a": 225,
+    "commits_b": 72,
+    "coupling_a_to_b": 12.9,
+    "coupling_b_to_a": 40.3,
+    "jaccard_similarity": 10.8
+  },
+  {
+    "file_a": "core.py",
+    "file_b": "shell_completion.py",
+    "shared_commits": 19,
+    "commits_a": 225,
+    "commits_b": 50,
+    "coupling_a_to_b": 8.4,
+    "coupling_b_to_a": 38.0,
+    "jaccard_similarity": 7.4
+  },
+  {
+    "file_a": "core.py",
+    "file_b": "decorators.py",
+    "shared_commits": 18,
+    "commits_a": 225,
+    "commits_b": 46,
+    "coupling_a_to_b": 8.0,
+    "coupling_b_to_a": 39.1,
+    "jaccard_similarity": 7.1
+  },
+  {
+    "file_a": "_termui_impl.py",
+    "file_b": "termui.py",
+    "shared_commits": 17,
+    "commits_a": 58,
+    "commits_b": 65,
+    "coupling_a_to_b": 29.3,
+    "coupling_b_to_a": 26.2,
+    "jaccard_similarity": 16.0
+  },
+  {
+    "file_a": "core.py",
+    "file_b": "termui.py",
+    "shared_commits": 17,
+    "commits_a": 225,
+    "commits_b": 65,
+    "coupling_a_to_b": 7.6,
+    "coupling_b_to_a": 26.2,
+    "jaccard_similarity": 6.2
+  },
+  {
+    "file_a": "core.py",
+    "file_b": "parser.py",
+    "shared_commits": 16,
+    "commits_a": 225,
+    "commits_b": 21,
+    "coupling_a_to_b": 7.1,
+    "coupling_b_to_a": 76.2,
+    "jaccard_similarity": 7.0
+  },
+  {
+    "file_a": "core.py",
+    "file_b": "utils.py",
+    "shared_commits": 14,
+    "commits_a": 225,
+    "commits_b": 44,
+    "coupling_a_to_b": 6.2,
+    "coupling_b_to_a": 31.8,
+    "jaccard_similarity": 5.5
+  },
+  {
+    "file_a": "core.py",
+    "file_b": "exceptions.py",
+    "shared_commits": 14,
+    "commits_a": 225,
+    "commits_b": 24,
+    "coupling_a_to_b": 6.2,
+    "coupling_b_to_a": 58.3,
+    "jaccard_similarity": 6.0
+  },
+  {
+    "file_a": "_compat.py",
+    "file_b": "_termui_impl.py",
+    "shared_commits": 12,
+    "commits_a": 30,
+    "commits_b": 58,
+    "coupling_a_to_b": 40.0,
+    "coupling_b_to_a": 20.7,
+    "jaccard_similarity": 15.8
+  },
+  {
+    "file_a": "_compat.py",
+    "file_b": "utils.py",
+    "shared_commits": 12,
+    "commits_a": 30,
+    "commits_b": 44,
+    "coupling_a_to_b": 40.0,
+    "coupling_b_to_a": 27.3,
+    "jaccard_similarity": 19.4
+  },
+  {
+    "file_a": "types.py",
+    "file_b": "utils.py",
+    "shared_commits": 12,
+    "commits_a": 72,
+    "commits_b": 44,
+    "coupling_a_to_b": 16.7,
+    "coupling_b_to_a": 27.3,
+    "jaccard_similarity": 11.5
+  },
+  {
+    "file_a": "termui.py",
+    "file_b": "types.py",
+    "shared_commits": 11,
+    "commits_a": 65,
+    "commits_b": 72,
+    "coupling_a_to_b": 16.9,
+    "coupling_b_to_a": 15.3,
+    "jaccard_similarity": 8.7
+  },
+  {
+    "file_a": "_termui_impl.py",
+    "file_b": "core.py",
+    "shared_commits": 11,
+    "commits_a": 58,
+    "commits_b": 225,
+    "coupling_a_to_b": 19.0,
+    "coupling_b_to_a": 4.9,
+    "jaccard_similarity": 4.0
+  },
+  {
+    "file_a": "_termui_impl.py",
+    "file_b": "utils.py",
+    "shared_commits": 11,
+    "commits_a": 58,
+    "commits_b": 44,
+    "coupling_a_to_b": 19.0,
+    "coupling_b_to_a": 25.0,
+    "jaccard_similarity": 12.1
+  },
+  {
+    "file_a": "termui.py",
+    "file_b": "utils.py",
+    "shared_commits": 10,
+    "commits_a": 65,
+    "commits_b": 44,
+    "coupling_a_to_b": 15.4,
+    "coupling_b_to_a": 22.7,
+    "jaccard_similarity": 10.1
+  },
+  {
+    "file_a": "__init__.py",
+    "file_b": "core.py",
+    "shared_commits": 9,
+    "commits_a": 47,
+    "commits_b": 225,
+    "coupling_a_to_b": 19.1,
+    "coupling_b_to_a": 4.0,
+    "jaccard_similarity": 3.4
+  },
+  {
+    "file_a": "exceptions.py",
+    "file_b": "types.py",
+    "shared_commits": 9,
+    "commits_a": 24,
+    "commits_b": 72,
+    "coupling_a_to_b": 37.5,
+    "coupling_b_to_a": 12.5,
+    "jaccard_similarity": 10.3
+  },
+  {
+    "file_a": "core.py",
+    "file_b": "testing.py",
+    "shared_commits": 9,
+    "commits_a": 225,
+    "commits_b": 37,
+    "coupling_a_to_b": 4.0,
+    "coupling_b_to_a": 24.3,
+    "jaccard_similarity": 3.6
+  },
+  {
+    "file_a": "_compat.py",
+    "file_b": "types.py",
+    "shared_commits": 9,
+    "commits_a": 30,
+    "commits_b": 72,
+    "coupling_a_to_b": 30.0,
+    "coupling_b_to_a": 12.5,
+    "jaccard_similarity": 9.7
+  },
+  {
+    "file_a": "_compat.py",
+    "file_b": "core.py",
+    "shared_commits": 8,
+    "commits_a": 30,
+    "commits_b": 225,
+    "coupling_a_to_b": 26.7,
+    "coupling_b_to_a": 3.6,
+    "jaccard_similarity": 3.2
+  },
+  {
+    "file_a": "_compat.py",
+    "file_b": "termui.py",
+    "shared_commits": 8,
+    "commits_a": 30,
+    "commits_b": 65,
+    "coupling_a_to_b": 26.7,
+    "coupling_b_to_a": 12.3,
+    "jaccard_similarity": 9.2
+  },
+  {
+    "file_a": "_termui_impl.py",
+    "file_b": "types.py",
+    "shared_commits": 8,
+    "commits_a": 58,
+    "commits_b": 72,
+    "coupling_a_to_b": 13.8,
+    "coupling_b_to_a": 11.1,
+    "jaccard_similarity": 6.6
+  },
+  {
+    "file_a": "shell_completion.py",
+    "file_b": "types.py",
+    "shared_commits": 8,
+    "commits_a": 50,
+    "commits_b": 72,
+    "coupling_a_to_b": 16.0,
+    "coupling_b_to_a": 11.1,
+    "jaccard_similarity": 7.0
+  },
+  {
+    "file_a": "decorators.py",
+    "file_b": "exceptions.py",
+    "shared_commits": 7,
+    "commits_a": 46,
+    "commits_b": 24,
+    "coupling_a_to_b": 15.2,
+    "coupling_b_to_a": 29.2,
+    "jaccard_similarity": 11.1
+  },
+  {
+    "file_a": "core.py",
+    "file_b": "formatting.py",
+    "shared_commits": 6,
+    "commits_a": 225,
+    "commits_b": 13,
+    "coupling_a_to_b": 2.7,
+    "coupling_b_to_a": 46.2,
+    "jaccard_similarity": 2.6
+  },
+  {
+    "file_a": "exceptions.py",
+    "file_b": "shell_completion.py",
+    "shared_commits": 6,
+    "commits_a": 24,
+    "commits_b": 50,
+    "coupling_a_to_b": 25.0,
+    "coupling_b_to_a": 12.0,
+    "jaccard_similarity": 8.8
+  },
+  {
+    "file_a": "parser.py",
+    "file_b": "types.py",
+    "shared_commits": 6,
+    "commits_a": 21,
+    "commits_b": 72,
+    "coupling_a_to_b": 28.6,
+    "coupling_b_to_a": 8.3,
+    "jaccard_similarity": 6.9
+  },
+  {
+    "file_a": "formatting.py",
+    "file_b": "termui.py",
+    "shared_commits": 5,
+    "commits_a": 13,
+    "commits_b": 65,
+    "coupling_a_to_b": 38.5,
+    "coupling_b_to_a": 7.7,
+    "jaccard_similarity": 6.8
+  },
+  {
+    "file_a": "_termui_impl.py",
+    "file_b": "_winconsole.py",
+    "shared_commits": 5,
+    "commits_a": 58,
+    "commits_b": 11,
+    "coupling_a_to_b": 8.6,
+    "coupling_b_to_a": 45.5,
+    "jaccard_similarity": 7.8
+  },
+  {
+    "file_a": "_termui_impl.py",
+    "file_b": "decorators.py",
+    "shared_commits": 5,
+    "commits_a": 58,
+    "commits_b": 46,
+    "coupling_a_to_b": 8.6,
+    "coupling_b_to_a": 10.9,
+    "jaccard_similarity": 5.1
+  },
+  {
+    "file_a": "_termui_impl.py",
+    "file_b": "parser.py",
+    "shared_commits": 5,
+    "commits_a": 58,
+    "commits_b": 21,
+    "coupling_a_to_b": 8.6,
+    "coupling_b_to_a": 23.8,
+    "jaccard_similarity": 6.8
+  },
+  {
+    "file_a": "_winconsole.py",
+    "file_b": "core.py",
+    "shared_commits": 5,
+    "commits_a": 11,
+    "commits_b": 225,
+    "coupling_a_to_b": 45.5,
+    "coupling_b_to_a": 2.2,
+    "jaccard_similarity": 2.2
+  },
+  {
+    "file_a": "_winconsole.py",
+    "file_b": "types.py",
+    "shared_commits": 5,
+    "commits_a": 11,
+    "commits_b": 72,
+    "coupling_a_to_b": 45.5,
+    "coupling_b_to_a": 6.9,
+    "jaccard_similarity": 6.4
+  },
+  {
+    "file_a": "decorators.py",
+    "file_b": "termui.py",
+    "shared_commits": 5,
+    "commits_a": 46,
+    "commits_b": 65,
+    "coupling_a_to_b": 10.9,
+    "coupling_b_to_a": 7.7,
+    "jaccard_similarity": 4.7
+  },
+  {
+    "file_a": "decorators.py",
+    "file_b": "types.py",
+    "shared_commits": 5,
+    "commits_a": 46,
+    "commits_b": 72,
+    "coupling_a_to_b": 10.9,
+    "coupling_b_to_a": 6.9,
+    "jaccard_similarity": 4.4
+  },
+  {
+    "file_a": "decorators.py",
+    "file_b": "utils.py",
+    "shared_commits": 5,
+    "commits_a": 46,
+    "commits_b": 44,
+    "coupling_a_to_b": 10.9,
+    "coupling_b_to_a": 11.4,
+    "jaccard_similarity": 5.9
+  },
+  {
+    "file_a": "_termui_impl.py",
+    "file_b": "testing.py",
+    "shared_commits": 5,
+    "commits_a": 58,
+    "commits_b": 37,
+    "coupling_a_to_b": 8.6,
+    "coupling_b_to_a": 13.5,
+    "jaccard_similarity": 5.6
+  },
+  {
+    "file_a": "exceptions.py",
+    "file_b": "testing.py",
+    "shared_commits": 5,
+    "commits_a": 24,
+    "commits_b": 37,
+    "coupling_a_to_b": 20.8,
+    "coupling_b_to_a": 13.5,
+    "jaccard_similarity": 8.9
+  },
+  {
+    "file_a": "termui.py",
+    "file_b": "testing.py",
+    "shared_commits": 5,
+    "commits_a": 65,
+    "commits_b": 37,
+    "coupling_a_to_b": 7.7,
+    "coupling_b_to_a": 13.5,
+    "jaccard_similarity": 5.2
+  },
+  {
+    "file_a": "testing.py",
+    "file_b": "types.py",
+    "shared_commits": 5,
+    "commits_a": 37,
+    "commits_b": 72,
+    "coupling_a_to_b": 13.5,
+    "coupling_b_to_a": 6.9,
+    "jaccard_similarity": 4.8
+  },
+  {
+    "file_a": "testing.py",
+    "file_b": "utils.py",
+    "shared_commits": 5,
+    "commits_a": 37,
+    "commits_b": 44,
+    "coupling_a_to_b": 13.5,
+    "coupling_b_to_a": 11.4,
+    "jaccard_similarity": 6.6
+  },
+  {
+    "file_a": "_compat.py",
+    "file_b": "exceptions.py",
+    "shared_commits": 5,
+    "commits_a": 30,
+    "commits_b": 24,
+    "coupling_a_to_b": 16.7,
+    "coupling_b_to_a": 20.8,
+    "jaccard_similarity": 10.2
+  },
+  {
+    "file_a": "exceptions.py",
+    "file_b": "utils.py",
+    "shared_commits": 5,
+    "commits_a": 24,
+    "commits_b": 44,
+    "coupling_a_to_b": 20.8,
+    "coupling_b_to_a": 11.4,
+    "jaccard_similarity": 7.9
+  }
+]

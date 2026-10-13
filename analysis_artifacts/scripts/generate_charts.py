@@ -42,41 +42,73 @@ print("Saved activity_curve.png")
 # ==========================================
 # 2. Decomposition Architecture View
 # ==========================================
-fig, ax = plt.subplots(figsize=(10, 6.5), dpi=300)
+fig, ax = plt.subplots(figsize=(11, 7.8), dpi=300)
 ax.set_xlim(0, 100)
 ax.set_ylim(0, 100)
 ax.axis('off')
 
 # Title
-ax.text(50, 96, "Pallets Click: Module Decomposition View (Layered Style)", ha='center', va='center', fontsize=13, fontweight='bold')
+ax.text(42, 96.5, "Pallets Click: Module Decomposition View (Layered Architecture Style)", ha='center', va='center', fontsize=12.5, fontweight='bold', color="#0d233a")
+
+# Legend box at top right
+legend_rect = patches.FancyBboxPatch((74, 91.5), 23, 7.5, boxstyle="round,pad=0.4", ec="#b0bec5", fc="#fafafa", lw=1)
+ax.add_patch(legend_rect)
+ax.text(75.5, 96.5, "Legend & Notation", fontsize=7.5, fontweight="bold", color="#37474f")
+ax.plot([75.5, 80], [94.2, 94.2], color="#37474f", lw=1.6)
+ax.text(81.5, 94.2, "Standard Dependency", fontsize=6.8, va='center', color="#455a64")
+ax.plot([75.5, 80], [92.5, 92.5], color="#c2185b", lw=1.4, linestyle="dashed")
+ax.text(81.5, 92.5, "Lazy Dynamic Import", fontsize=6.8, va='center', color="#c2185b")
 
 # Layer boxes
 layers = [
-    ("Layer 4: Presentation & CLI Entry", 75, 16, ["decorators.py", "shell_completion.py"], "#e1f5fe", "#0288d1"),
-    ("Layer 3: Core Command & Context Model", 52, 16, ["core.py (Command, Group, Context, Parameter)"], "#e8f5e9", "#388e3c"),
-    ("Layer 2: Domain Utilities & Type System", 29, 16, ["types.py", "formatting.py", "termui.py", "parser.py"], "#fff3e0", "#f57c00"),
-    ("Layer 1: Foundations & Infrastructure", 6, 16, ["utils.py", "exceptions.py", "globals.py", "_compat.py"], "#f3e5f5", "#7b1fa2"),
+    ("Layer 4: Presentation & Interface", 69, 18, [
+        ("decorators.py", "CLI decorators (@command, @group, @option)"),
+        ("shell_completion.py", "Shell completion generators (Bash, Zsh, Fish, PS)")
+    ], "#e1f5fe", "#0288d1"),
+    ("Layer 3: Core Command & Execution Model", 46, 18, [
+        ("core.py", "Core abstractions: Command, Group, Context, Parameter, Option, Argument")
+    ], "#e8f5e9", "#2e7d32"),
+    ("Layer 2: Domain Utilities & Type System", 23, 18, [
+        ("types.py", "ParamType type conversion & validation"),
+        ("parser.py", "POSIX/GNU token parser"),
+        ("formatting.py", "Help text & table formatter"),
+        ("termui.py", "Terminal interaction prompts & pagination")
+    ], "#fff3e0", "#f57c00"),
+    ("Layer 1: Foundations & Infrastructure", 1.5, 17, [
+        ("utils.py", "Stream helpers & echo"),
+        ("exceptions.py", "CLI exception hierarchy"),
+        ("globals.py", "Thread-local context stack"),
+        ("_compat.py", "Cross-version Python shims")
+    ], "#f3e5f5", "#7b1fa2"),
 ]
 
 for title, y_bottom, h, modules, bg_color, border_color in layers:
-    rect = patches.FancyBboxPatch((8, y_bottom), 84, h, boxstyle="round,pad=1", ec=border_color, fc=bg_color, lw=1.5, zorder=1)
+    rect = patches.FancyBboxPatch((4, y_bottom), 92, h, boxstyle="round,pad=0.8", ec=border_color, fc=bg_color, lw=1.5, zorder=1)
     ax.add_patch(rect)
-    ax.text(12, y_bottom + h - 3, title, fontsize=10.5, fontweight='bold', color=border_color)
-    mod_str = "   |   ".join(modules)
-    ax.text(50, y_bottom + h/2 - 1.5, mod_str, ha='center', va='center', fontsize=9.5, color="#212121",
-            bbox=dict(boxstyle="square,pad=0.5", fc="#ffffff", ec="#cccccc", lw=0.8))
+    ax.text(6.5, y_bottom + h - 3, title, fontsize=10.2, fontweight='bold', color=border_color)
+    
+    n_mods = len(modules)
+    w_mod = 88 / n_mods
+    for idx, (m_name, m_desc) in enumerate(modules):
+        mx = 6 + idx * w_mod
+        my = y_bottom + 2.5
+        mw = w_mod - 2.5
+        mh = h - 6.8
+        m_rect = patches.FancyBboxPatch((mx, my), mw, mh, boxstyle="square,pad=0.3", ec="#90a4ae", fc="#ffffff", lw=0.8, zorder=2)
+        ax.add_patch(m_rect)
+        ax.text(mx + mw/2, my + mh*0.65, m_name, ha='center', va='center', fontsize=9, fontweight='bold', color="#212121", zorder=3)
+        ax.text(mx + mw/2, my + mh*0.28, m_desc, ha='center', va='center', fontsize=7.2, color="#546e7a", wrap=True, zorder=3)
 
-# Arrows representing <<allowed to use>>
-arrow_props = dict(facecolor='#424242', edgecolor='#424242', width=1.5, headwidth=7, headlength=8, shrink=0.05)
-for y_start in [75, 52, 29]:
-    ax.annotate("", xy=(50, y_start), xytext=(50, y_start - 7),
-                arrowprops=dict(arrowstyle="<-", lw=1.8, color="#37474f"))
-    ax.text(53, y_start - 4, "<<allowed to use>>", fontsize=8.5, fontstyle='italic', color="#455a64", va='center')
+# Downward <<allowed to use>> arrows
+for y_conn in [69, 46, 23]:
+    ax.annotate("", xy=(50, y_conn - 4), xytext=(50, y_conn),
+                arrowprops=dict(arrowstyle="->", lw=2, color="#37474f"))
+    ax.text(52, y_conn - 2.2, "<<allowed to use>>", fontsize=8.2, fontstyle='italic', color="#37474f", va='center')
 
-# Lazy import note between decorators and core
-ax.annotate("", xy=(22, 68), xytext=(22, 75),
-            arrowprops=dict(arrowstyle="->", lw=1.2, color="#c2185b", linestyle="dashed"))
-ax.text(11, 71.5, "lazy import", fontsize=8, color="#c2185b", fontweight="bold")
+# Lazy import arrow
+ax.annotate("", xy=(16, 62), xytext=(16, 69),
+            arrowprops=dict(arrowstyle="->", lw=1.5, color="#c2185b", linestyle="dashed"))
+ax.text(6.5, 65.5, "<<lazy import>>", fontsize=7.8, color="#c2185b", fontweight="bold")
 
 plt.tight_layout()
 plt.savefig(OUTPUT_DIR / "decomposition_view.png", dpi=300)
@@ -86,29 +118,39 @@ print("Saved decomposition_view.png")
 # ==========================================
 # 3. Performance Tactic View (Deferred Loading & Lazy Imports)
 # ==========================================
-fig, ax = plt.subplots(figsize=(10, 6.2), dpi=300)
+fig, ax = plt.subplots(figsize=(11, 7.5), dpi=300)
 ax.set_xlim(0, 100)
 ax.set_ylim(0, 100)
 ax.axis('off')
 
-ax.text(50, 96, "Performance Tactic: Lazy Subcommand Resolution & Deferred Loading", ha='center', va='center', fontsize=12.5, fontweight='bold')
+# Title & Tactical Goal Callout
+ax.text(42, 96.5, "Performance Tactic: Deferred Subcommand Resolution & Lazy Loading", ha='center', va='center', fontsize=12, fontweight='bold', color="#0d233a")
 
-# Boxes representing sequence flow
+benefit_rect = patches.FancyBboxPatch((74, 91.5), 23, 7.5, boxstyle="round,pad=0.4", ec="#2e7d32", fc="#e8f5e9", lw=1)
+ax.add_patch(benefit_rect)
+ax.text(75.5, 96.5, "Architectural Tactic Goal", fontsize=7.5, fontweight="bold", color="#2e7d32")
+ax.text(75.5, 94.2, "\u2022 Cold import < 50 ms", fontsize=6.8, color="#1b5e20")
+ax.text(75.5, 92.5, "\u2022 Tree heap < 1 MB", fontsize=6.8, color="#1b5e20")
+
 steps = [
-    (10, 75, "1. CLI Invocation", "Terminal executes `mycli subcmd`.\nCold startup process spawned.", "#e3f2fd", "#1976d2"),
-    (10, 52, "2. Fast Root Import", "Only root command module & Click decorators loaded.\nHeavy subcommands bypassed.", "#e8f5e9", "#2e7d32"),
-    (10, 29, "3. Lazy Group Match", "Group.get_command(ctx, 'subcmd') checks lazy registry.\nOnly target subcommand module imported on demand.", "#fff8e1", "#fbc02d"),
-    (10, 6, "4. Fast Execution & Exit", "Target handler executes, output formatted via Pager/Echo.\nUnused command branches never loaded into memory.", "#fce4ec", "#c2185b"),
+    (6, 69, "Step 1: Cold Invocation & Minimal Root Loading", 
+     "Terminal invokes CLI (e.g. `mycli build --opt`). Python boots and imports `click` runtime in ~18 ms.\nOnly root command decorator and Click context are loaded into memory.", "#e3f2fd", "#1976d2"),
+    (6, 47, "Step 2: Token Parsing & Root Dispatch", 
+     "Parser processes command tokens in 25–65 µs. Matches target command identifier 'build'.\nRoot `click.Group` queries its lazy command registry instead of loading full tree.", "#e8f5e9", "#2e7d32"),
+    (6, 25, "Step 3: Just-In-Time Dynamic Subcommand Import", 
+     "`Group.get_command(ctx, 'build')` dynamically imports only the target module (`mycli.build`).\nUnrelated command subtrees (e.g., `deploy`, `monitor`) and their heavy dependencies remain unimported.", "#fff8e1", "#fbc02d"),
+    (6, 3, "Step 4: Handler Execution, Stream Output & Clean Exit", 
+     "Target handler executes with isolated `CliRunner`/`Context`. Stream output written via Pager/Echo.\nEntire memory footprint remains ~720 KB without bloated dependency loading.", "#fce4ec", "#c2185b"),
 ]
 
 for x, y, title, desc, bg, border in steps:
-    rect = patches.FancyBboxPatch((x, y), 80, 17, boxstyle="round,pad=0.8", ec=border, fc=bg, lw=1.5)
+    rect = patches.FancyBboxPatch((x, y), 88, 17, boxstyle="round,pad=0.8", ec=border, fc=bg, lw=1.5)
     ax.add_patch(rect)
-    ax.text(x + 3, y + 13, title, fontsize=10.5, fontweight='bold', color=border)
-    ax.text(x + 3, y + 5.5, desc, fontsize=9.2, color="#263238")
+    ax.text(x + 2.5, y + 13, title, fontsize=9.8, fontweight='bold', color=border)
+    ax.text(x + 2.5, y + 5.5, desc, fontsize=8.6, color="#263238")
 
-for y in [75, 52, 29]:
-    ax.annotate("", xy=(50, y - 6), xytext=(50, y),
+for y in [69, 47, 25]:
+    ax.annotate("", xy=(50, y - 4.5), xytext=(50, y),
                 arrowprops=dict(arrowstyle="->", lw=2, color="#37474f"))
 
 plt.tight_layout()
@@ -128,23 +170,23 @@ ccns = []
 slocs = []
 
 for m, data in mod_m.items():
-    if data["sloc"] > 50: # focus on substantive modules
+    if data["sloc"] > 50:
         mod_names.append(m + ".py")
         churns.append(data["git_churn"])
         ccns.append(data["avg_ccn"])
         slocs.append(data["sloc"])
 
-fig, ax = plt.subplots(figsize=(9, 5.5), dpi=300)
+fig, ax = plt.subplots(figsize=(9.5, 5.8), dpi=300)
 sizes = [s * 0.45 for s in slocs]
 colors = [c * ch for c, ch in zip(ccns, churns)]
 
 scatter = ax.scatter(churns, ccns, s=sizes, c=colors, cmap="YlOrRd", edgecolors="black", linewidth=1.2, alpha=0.85, zorder=3)
 cbar = plt.colorbar(scatter)
-cbar.set_label("Hotspot Risk (Git Churn × Avg CCN)", rotation=270, labelpad=15)
+cbar.set_label("CodeScene Hotspot Score (Git Churn × Avg CCN)", rotation=270, labelpad=15)
 
 for i, name in enumerate(mod_names):
-    offset_x = 4 if churns[i] < 200 else -20
-    offset_y = 0.15 if ccns[i] < 6 else -0.25
+    offset_x = 4 if churns[i] < 200 else -25
+    offset_y = 0.15 if ccns[i] < 6 else -0.28
     ax.annotate(name, (churns[i], ccns[i]), textcoords="offset points", xytext=(offset_x, offset_y), fontsize=8.5, fontweight="bold")
 
 ax.set_title("CodeScene Hotspot Map: Module Complexity vs. Commit Churn", fontweight="bold", pad=12)
@@ -158,7 +200,52 @@ plt.close()
 print("Saved modifiability_hotspots.png")
 
 # ==========================================
-# 5. Test Branch Coverage per Module
+# 5. CodeScene Temporal Coupling (Code Coupling)
+# ==========================================
+with open(OUTPUT_DIR / "temporal_coupling.json", "r") as f:
+    tc_data = json.load(f)
+
+top_tc = tc_data[:10]
+pair_labels = [f"{item['file_a']} \u2194 {item['file_b']}" for item in top_tc]
+shared_commits = [item["shared_commits"] for item in top_tc]
+coupling_percentages = [item["coupling_b_to_a"] for item in top_tc]
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 5.2), dpi=300)
+
+y_pos = np.arange(len(pair_labels))
+
+bars1 = ax1.barh(y_pos, shared_commits, color="#1976d2", edgecolor="#0d47a1", height=0.65, zorder=3)
+ax1.set_yticks(y_pos)
+ax1.set_yticklabels(pair_labels, fontsize=9, fontweight="bold")
+ax1.invert_yaxis()
+ax1.set_xlabel("Shared Git Commits (Co-Change Revisions)", labelpad=8)
+ax1.set_title("Co-Change Frequency (Code Coupling)", fontweight="bold", pad=10)
+ax1.grid(axis='x', linestyle='--', alpha=0.6, zorder=0)
+for bar in bars1:
+    w = bar.get_width()
+    ax1.text(w + 0.6, bar.get_y() + bar.get_height()/2.0, f"{int(w)}", va='center', fontsize=8.5, color="#212121")
+ax1.set_xlim(0, max(shared_commits) + 4)
+
+bars2 = ax2.barh(y_pos, coupling_percentages, color="#e65100", edgecolor="#bf360c", height=0.65, zorder=3)
+ax2.set_yticks(y_pos)
+ax2.set_yticklabels([])
+ax2.invert_yaxis()
+ax2.set_xlabel("Degree of Coupling (% of Revisions Coupled)", labelpad=8)
+ax2.set_title("CodeScene Coupling Degree (%)", fontweight="bold", pad=10)
+ax2.grid(axis='x', linestyle='--', alpha=0.6, zorder=0)
+for bar in bars2:
+    w = bar.get_width()
+    ax2.text(w + 1.2, bar.get_y() + bar.get_height()/2.0, f"{w:.1f}%", va='center', fontsize=8.5, color="#212121")
+ax2.set_xlim(0, 90)
+
+plt.suptitle("CodeScene Temporal Coupling Analysis: Co-Change Revisions Across Modules", fontsize=12, fontweight="bold", y=0.98)
+plt.tight_layout()
+plt.savefig(OUTPUT_DIR / "temporal_coupling.png", dpi=300)
+plt.close()
+print("Saved temporal_coupling.png")
+
+# ==========================================
+# 6. Test Branch Coverage per Module
 # ==========================================
 with open(OUTPUT_DIR / "testability_metrics.json", "r") as f:
     test_m = json.load(f)
@@ -200,14 +287,13 @@ plt.close()
 print("Saved testability_coverage.png")
 
 # ==========================================
-# 6. Performance Benchmarks
+# 7. Performance Benchmarks
 # ==========================================
 with open(OUTPUT_DIR / "performance_metrics.json", "r") as f:
     perf_m = json.load(f)
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4.2), dpi=300)
 
-# Subplot 1: Startup latency distribution
 times = [perf_m["import_overhead"]["min_ms"], perf_m["import_overhead"]["avg_ms"], perf_m["import_overhead"]["max_ms"]]
 cats = ["Min Latency", "Average Latency", "Max Latency"]
 b1 = ax1.bar(cats, times, color=["#4caf50", "#2196f3", "#ff9800"], edgecolor="#333333", width=0.55, zorder=3)
@@ -219,7 +305,6 @@ for bar in b1:
     ax1.text(bar.get_x() + bar.get_width()/2.0, yval + 0.4, f"{yval:.2f} ms", ha='center', va='bottom', fontsize=9)
 ax1.set_ylim(0, max(times) + 4)
 
-# Subplot 2: Parse latency microbenchmark
 parse_cats = ["Simple Command", "Nested Group Dispatch"]
 latencies = [perf_m["parse_dispatch_latency"]["simple_command_parse_us"], perf_m["parse_dispatch_latency"]["nested_group_parse_us"]]
 b2 = ax2.bar(parse_cats, latencies, color=["#9c27b0", "#00bcd4"], edgecolor="#333333", width=0.45, zorder=3)
@@ -236,4 +321,4 @@ plt.savefig(OUTPUT_DIR / "performance_benchmarks.png", dpi=300)
 plt.close()
 print("Saved performance_benchmarks.png")
 
-print("ALL ARCHITECTURAL PLOTS GENERATED SUCCESSFULLY IN ./analysis/")
+print("ALL ARCHITECTURAL PLOTS GENERATED CLEANLY IN ./analysis/")
